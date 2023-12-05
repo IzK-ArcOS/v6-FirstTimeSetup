@@ -1,0 +1,15 @@
+:root div.fts-content {
+  --bg: #fcfcfc;
+  --fg: #555555;
+  --content-shadow: 0px 4px 20px 5px rgba(0, 0, 0, 0.5);
+  --content-border: #a9a9a9 1px solid;
+  --suggested-bg: #00a3ff;
+  --suggested-hover-bg: #59c3ff;
+  --suggested-active-bg: #1b76aa;
+  --suggested-fg: #ffffff;
+  --suggested-hover-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+  --suggested-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  --button-bg: #ececec;
+  --button-hover-bg: #e0e0e0;
+  --button-active-bg: #c3c3c3;
+}

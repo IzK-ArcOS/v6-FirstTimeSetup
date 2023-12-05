@@ -1,0 +1,27 @@
+div.fts-content div.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+div.fts-content div.header:not(.noMargin) {
+  margin-top: 50px;
+}
+
+div.fts-content div.header img.image {
+  height: 100px;
+}
+
+div.fts-content div.header div.slot * {
+  margin: 0;
+  text-align: center;
+}
+
+div.fts-content div.header h1 {
+  font-size: 20px;
+}
+div.fts-content div.header p.subheader {
+  opacity: 0.5;
+}

@@ -1,0 +1,69 @@
+div.state-fts-license div.license-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+div.state-fts-license div.license-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+div.state-fts-license div.license-header * {
+  margin: 0;
+}
+
+div.state-fts-license div.license-header h1 {
+  font-size: 23px;
+}
+
+div.state-fts-license div.license-header p {
+  opacity: 0.5;
+}
+
+div.state-fts-license div.license-header img {
+  height: 48px;
+  margin-left: auto !important;
+}
+div.state-fts-license div.license-header div.right {
+  margin-left: auto !important;
+}
+
+div.state-fts-license textarea {
+  width: 100% !important;
+  height: 240px !important;
+  resize: none !important;
+  border: none;
+  background-color: inherit;
+  color: inherit;
+  font-size: 11px;
+  font-family: "Source Code Pro", monospace;
+}
+
+div.state-fts-license div.bottom {
+  margin-top: auto;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+div.state-fts-license div.bottom div.right {
+  margin-left: auto;
+}
+div.state-fts-license div.bottom button.material-icons-round {
+  margin: 0;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  color: var(--fg);
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+div.state-fts-license div.bottom button.material-icons-round:hover {
+  background-color: var(--button-bg);
+}
+div.state-fts-license div.bottom button.material-icons-round:active {
+  background-color: var(--button-active-bg);
+}

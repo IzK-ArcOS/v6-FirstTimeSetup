@@ -1,0 +1,43 @@
+@import url("./root.css");
+@import url("./header.css");
+@import url("./elements.css");
+@import url("./actions.css");
+@import url("./page/license.css");
+
+div.fts-content {
+  background-image: url("../../../assets/bg/img24.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+div.fts-content.show {
+  pointer-events: initial !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+div.state-renderer.fts {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+div.fts-content > div.content {
+  width: 560px;
+  height: 400px;
+  box-shadow: var(--content-shadow);
+  background-color: var(--bg);
+  color: var(--fg);
+  border: var(--content-border);
+  border-radius: 10px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 13px;
+}
