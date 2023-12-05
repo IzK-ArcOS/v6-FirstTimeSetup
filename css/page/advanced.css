@@ -1,0 +1,50 @@
+div.state-fts-advanced {
+  padding: 0 30px;
+}
+
+div.state-fts-advanced div.header {
+  margin: 30px 0;
+}
+
+div.state-fts-advanced div.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+div.state-fts-advanced div.options button {
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  height: 62px;
+  font-family: inherit;
+  background-color: var(--button-bg);
+  color: var(--fg);
+}
+
+div.state-fts-advanced div.options button img {
+  height: 32px;
+}
+
+div.state-fts-advanced div.options button p {
+  margin: 0;
+  text-align: left;
+}
+
+div.state-fts-advanced div.options button p.title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+div.state-fts-advanced div.options button p.description {
+  opacity: 0.5;
+}
+div.state-fts-advanced div.options button:hover {
+  background-color: var(--button-hover-bg);
+}
+div.state-fts-advanced div.options button:active {
+  background-color: var(--button-active-bg);
+}

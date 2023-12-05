@@ -16,12 +16,12 @@
 
 <Header img={Logo()}>
   <h1>Welcome</h1>
-  <p class="subheader">To the future of ArcOS</p>
+  <p class="subheader">Let's get ArcOS set up.</p>
 </Header>
 
 <p class="spaced">To set up this installation of ArcOS, click Get Started.</p>
 
 <Actions>
   <Action fun={getStarted} suggested>Get Started</Action>
-  <Action fun={advanced} disabled>Advanced...</Action>
+  <Action fun={advanced}>Advanced...</Action>
 </Actions>

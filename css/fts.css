@@ -3,6 +3,8 @@
 @import url("./elements.css");
 @import url("./actions.css");
 @import url("./page/license.css");
+@import url("./page/advanced.css");
+@import url("./page/connect.css");
 
 div.fts-content {
   background-image: url("../../../assets/bg/img24.jpg");
@@ -16,6 +18,23 @@ div.fts-content {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
+}
+
+div.fts-content *,
+div.fts-content::before,
+div.fts-content::after {
+  transition: all 0.3s, color 0.1s;
+}
+
+div.fts-content::after {
+  content: "";
+  z-index: -1;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--content-after-bg);
 }
 
 div.fts-content.show {
@@ -40,4 +59,8 @@ div.fts-content > div.content {
   border-radius: 10px;
   font-family: "Nunito Sans", sans-serif;
   font-size: 13px;
+}
+
+div.fts-content > div.content > div.state-renderer > div[class*="content"] {
+  height: 100%;
 }

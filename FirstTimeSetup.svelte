@@ -3,8 +3,8 @@
   import StateRenderer from "$lib/StateRenderer.svelte";
   import { StateHandler } from "$ts/states";
   import { onMount } from "svelte";
-  import { firstTimeSetupStates } from "./ts/store";
   import { sleep } from "$ts/util";
+  import { firstTimeSetupStates } from "./ts/store/state";
 
   let handler: StateHandler;
   let show = false;

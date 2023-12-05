@@ -1,0 +1,45 @@
+div.state-fts-connect div.connect-content,
+div.state-fts-connect-custom div.connect-custom-content {
+  display: flex;
+  flex-direction: column;
+}
+
+div.state-fts-connect-custom form {
+  margin-top: 5px;
+}
+
+div.state-fts-connect-custom form div.input {
+  width: 250px;
+  height: 34px;
+  margin: 15px auto;
+  background-color: var(--button-bg);
+  padding: 8px 15px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+div.state-fts-connect-custom form div.input input {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  padding: 0;
+  width: calc(100% - 20px);
+}
+
+div.state-fts-connect-custom form div.input span.icon {
+  font-size: 20px;
+  opacity: 0.3;
+  color: inherit;
+}
+
+div.state-fts-connect-custom form div.input.errored {
+  color: var(--error);
+}
+
+div.state-fts-connect-custom form div.input.errored span.icon {
+  opacity: 1;
+}
