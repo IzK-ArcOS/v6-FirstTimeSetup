@@ -4,6 +4,13 @@ import CustomServer from "$state/FirstTimeSetup/Components/Pages/CustomServer.sv
 import Finish from "$state/FirstTimeSetup/Components/Pages/Finish.svelte";
 import License from "$state/FirstTimeSetup/Components/Pages/License.svelte";
 import Welcome from "$state/FirstTimeSetup/Components/Pages/Welcome.svelte";
+import {
+  ConnectIcon,
+  FlagIcon,
+  SecureIcon,
+  SettingsIcon,
+  WaveIcon,
+} from "$ts/images/general";
 import { States } from "$types/state";
 
 export const firstTimeSetupStates: States = new Map([
@@ -14,6 +21,7 @@ export const firstTimeSetupStates: States = new Map([
       content: Welcome,
       key: "welcome",
       name: "Welcome",
+      image: WaveIcon,
     },
   ],
   [
@@ -23,6 +31,7 @@ export const firstTimeSetupStates: States = new Map([
       content: Advanced,
       key: "advanced",
       name: "Advanced Options",
+      image: SettingsIcon,
     },
   ],
   [
@@ -32,6 +41,7 @@ export const firstTimeSetupStates: States = new Map([
       content: License,
       key: "license",
       name: "License Agreement",
+      image: SecureIcon,
     },
   ],
   [
@@ -41,6 +51,7 @@ export const firstTimeSetupStates: States = new Map([
       content: Connect,
       key: "connect",
       name: "Connect to ArcAPI",
+      image: ConnectIcon,
     },
   ],
   [
@@ -59,6 +70,7 @@ export const firstTimeSetupStates: States = new Map([
       content: Finish,
       key: "finish",
       name: "All finished!",
+      image: FlagIcon,
     },
   ],
 ]);

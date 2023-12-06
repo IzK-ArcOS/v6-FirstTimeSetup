@@ -5,6 +5,7 @@
   import { onMount } from "svelte";
   import { sleep } from "$ts/util";
   import { firstTimeSetupStates } from "./ts/store/state";
+  import Progress from "./Components/Progress.svelte";
 
   let handler: StateHandler;
   let show = false;
@@ -23,5 +24,6 @@
     <div class="content">
       <StateRenderer {handler} />
     </div>
+    <Progress {handler} />
   </div>
 {/if}

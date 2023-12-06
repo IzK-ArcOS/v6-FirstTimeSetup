@@ -44,7 +44,9 @@ div.state-fts-advanced div.options button p.description {
 }
 div.state-fts-advanced div.options button:hover {
   background-color: var(--button-hover-bg);
+  box-shadow: var(--suggested-hover-shadow);
 }
 div.state-fts-advanced div.options button:active {
   background-color: var(--button-active-bg);
+  box-shadow: none;
 }

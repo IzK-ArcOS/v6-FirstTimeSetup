@@ -1,0 +1,50 @@
+div.fts-content div.progress {
+  padding: 8px;
+  display: flex;
+  gap: 10px;
+  height: 50px;
+  align-items: center;
+}
+div.fts-content div.progress div.progress-state {
+  width: fit-content;
+  max-width: 34px;
+  min-width: 34px;
+  height: 34px;
+  background-color: var(--backdropped-bg);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+
+  overflow: hidden;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  transition: all cubic-bezier(0.3, 1, 0.22, 1) 0.6s /* , width 0s, gap 0s */;
+  gap: 0;
+}
+
+div.fts-content div.progress div.progress-state.active {
+  max-width: 200px;
+  box-shadow: var(--suggested-hover-shadow);
+  background-color: var(--bg);
+  gap: 10px;
+  padding-right: 10px;
+}
+
+div.fts-content div.progress div.progress-state img {
+  height: 24px;
+}
+
+div.fts-content div.progress div.progress-state span {
+  white-space: nowrap;
+}
+
+div.fts-content div.progress div.progress-state:not(.active) span {
+  opacity: 0;
+}
+
+div.fts-content div.progress div.build {
+  margin: 0 10px;
+  margin-left: auto;
+  opacity: 0.5;
+}

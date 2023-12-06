@@ -8,10 +8,11 @@
   --suggested-active-bg: #1b76aa;
   --suggested-fg: #ffffff;
   --suggested-hover-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
-  --suggested-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  --suggested-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
   --button-bg: #ececec;
   --button-hover-bg: #e0e0e0;
   --button-active-bg: #c3c3c3;
+  --backdropped-bg: var(--button-hover-bg);
   --error: rgb(223, 72, 72);
 }
 
@@ -31,6 +32,7 @@
     --button-hover-bg: #333;
     --button-active-bg: #111;
     --content-after-bg: #000a;
-    --error: rgb(255, 90, 90);
+    --error: rgb(207, 109, 109);
+    --backdropped-bg: var(--button-active-bg);
   }
 }

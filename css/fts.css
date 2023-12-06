@@ -2,6 +2,7 @@
 @import url("./header.css");
 @import url("./elements.css");
 @import url("./actions.css");
+@import url("./progress.css");
 @import url("./page/license.css");
 @import url("./page/advanced.css");
 @import url("./page/connect.css");
@@ -13,11 +14,13 @@ div.fts-content {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   overflow: hidden;
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
+  gap: 20px;
 }
 
 div.fts-content *,
@@ -49,9 +52,8 @@ div.state-renderer.fts {
   height: 100%;
 }
 
-div.fts-content > div.content {
+div.fts-content > div {
   width: 560px;
-  height: 400px;
   box-shadow: var(--content-shadow);
   background-color: var(--bg);
   color: var(--fg);
@@ -59,6 +61,14 @@ div.fts-content > div.content {
   border-radius: 10px;
   font-family: "Nunito Sans", sans-serif;
   font-size: 13px;
+}
+
+div.fts-content div.content div.state-renderer {
+  transition: all 0.3s, padding 0s;
+}
+
+div.fts-content > div.content {
+  height: 400px;
 }
 
 div.fts-content > div.content > div.state-renderer > div[class*="content"] {
