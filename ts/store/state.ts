@@ -1,6 +1,7 @@
 import Advanced from "$state/FirstTimeSetup/Components/Pages/Advanced.svelte";
 import Connect from "$state/FirstTimeSetup/Components/Pages/Connect.svelte";
 import CustomServer from "$state/FirstTimeSetup/Components/Pages/CustomServer.svelte";
+import Finish from "$state/FirstTimeSetup/Components/Pages/Finish.svelte";
 import License from "$state/FirstTimeSetup/Components/Pages/License.svelte";
 import Welcome from "$state/FirstTimeSetup/Components/Pages/Welcome.svelte";
 import { States } from "$types/state";
@@ -42,7 +43,6 @@ export const firstTimeSetupStates: States = new Map([
       name: "Connect to ArcAPI",
     },
   ],
-
   [
     "connect-custom",
     {
@@ -50,6 +50,15 @@ export const firstTimeSetupStates: States = new Map([
       content: CustomServer,
       key: "connect-custom",
       name: "Connect to Custom Server",
+    },
+  ],
+  [
+    "finish",
+    {
+      attribs: {},
+      content: Finish,
+      key: "finish",
+      name: "All finished!",
     },
   ],
 ]);
