@@ -7,7 +7,21 @@
 
   export let handler: StateHandler;
 
-  function community() {}
+  let connecting = false;
+  let errored = false
+
+  function community() {
+    connecting = true;
+
+    const success = await attemptConnection("community.arcapi.nl", "");
+
+    connecting = false;
+
+    if (!success) return (errored = true);
+
+    handler.navigate("finish");
+  }
+
   function custom() {
     handler.navigate("connect-custom");
   }
@@ -23,7 +37,7 @@
     a custom one?
   </p>
   <Actions>
-    <Action fun={community} suggested>Use Community</Action>
-    <Action fun={custom}>Custom...</Action>
+    <Action fun={community} disabled={connecting} suggested>{connecting ? "Connecting..." : "Use Community"}</Action>
+    <Action fun={custom} disabled={connecting}>Custom...</Action>
   </Actions>
 </div>
