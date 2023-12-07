@@ -4,6 +4,7 @@ div.fts-content div.progress {
   gap: 10px;
   height: 50px;
   align-items: center;
+  z-index: 900;
 }
 div.fts-content div.progress div.progress-state {
   width: fit-content;
@@ -47,4 +48,11 @@ div.fts-content div.progress div.build {
   margin: 0 10px;
   margin-left: auto;
   opacity: 0.5;
+}
+
+div.fts-content div.progress.hidden {
+  transform: translateY(-75px);
+  scale: 0.9; /* 
+  opacity: 0; */
+  box-shadow: none;
 }

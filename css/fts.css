@@ -69,6 +69,7 @@ div.fts-content div.content div.state-renderer {
 
 div.fts-content > div.content {
   height: 400px;
+  z-index: 1000;
 }
 
 div.fts-content > div.content > div.state-renderer > div[class*="content"] {

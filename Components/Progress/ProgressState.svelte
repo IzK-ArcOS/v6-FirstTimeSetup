@@ -2,13 +2,9 @@
   import { StateHandler } from "$ts/states";
   import { State } from "$types/state";
 
-  let current = "";
-
-  export let handler: StateHandler;
   export let key: string;
   export let state: State;
-
-  handler.current.subscribe((v) => (current = v.key));
+  export let current: string;
 </script>
 
 {#if state.image}

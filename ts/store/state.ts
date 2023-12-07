@@ -8,7 +8,6 @@ import {
   ConnectIcon,
   FlagIcon,
   SecureIcon,
-  SettingsIcon,
   WaveIcon,
 } from "$ts/images/general";
 import { States } from "$types/state";
@@ -27,11 +26,11 @@ export const firstTimeSetupStates: States = new Map([
   [
     "advanced",
     {
-      attribs: {},
+      attribs: { hideBar: true },
       content: Advanced,
       key: "advanced",
       name: "Advanced Options",
-      image: SettingsIcon,
+      /*  image: SettingsIcon, */
     },
   ],
   [
