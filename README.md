@@ -4,19 +4,7 @@ This repository is a submodule of [ArcOS v6](https://github.com/IzK-ArcOS/v6). I
 
 ## Dependencies
 
-v6 submodules depend on various assets and APIs from the parent v6 codebase. This specific submodule depends on:
-
-| File                  | Exports                                                                             |
-| --------------------- | ----------------------------------------------------------------------------------- |
-| `$ts/images/apps`     | `ArcTermIcon`                                                                       |
-| `$ts/images/general`  | `BugReportIcon`, `ConnectIcon`, `FlagIcon`, `HomeIcon`, `SecureIcon` and `WaveIcon` |
-| `$ts/server/authcode` | `setAuthcode`                                                                       |
-| `$ts/server/multi`    | `addServer`                                                                         |
-| `$ts/server/test`     | `testConnection`                                                                    |
-| `$types/state`        | `PrimaryState` and `StateHandler`                                                   |
-
-> Last updated: December 8th 2023 by @IzKuipers. This information might not be accurate, please notify us if this is the case.
-
+v6 submodules depend on various assets and APIs from the parent v6 codebase. This specific submodule's dependencies can be found [here](./DEPS.md).
 ## Original Author
 
 @IzKuipers [e-mail](mailto:izaak@arcapi.nl)
