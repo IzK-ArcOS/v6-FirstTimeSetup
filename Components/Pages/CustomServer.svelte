@@ -62,7 +62,7 @@
   </form>
   <Actions>
     <Action fun={back} disabled={connecting}>Go Back</Action>
-    <Action fun={connect} suggested disabled={!host || !ac || connecting}>
+    <Action fun={connect} suggested disabled={!host || connecting}>
       {connecting ? "Connecting..." : "Connect"}
     </Action>
   </Actions>
