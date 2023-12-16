@@ -14,7 +14,7 @@ export const advancedOptions: AdvancedOption[] = [
   },
   {
     action: () => {
-      throw "Not Implemented!";
+      throw new Error("Not Implemented!");
     },
     description: "Found something wrong? Tell us about it!",
     name: "Submit a bug report",
