@@ -6,11 +6,14 @@
   import { sleep } from "$ts/util";
   import { firstTimeSetupStates } from "./ts/store/state";
   import Progress from "./Components/Progress.svelte";
+  import { ArcSoundBus } from "$ts/soundbus";
 
   let handler: StateHandler;
   let show = false;
 
   onMount(async () => {
+    ArcSoundBus.playSound("arcos.system.logon");
+
     handler = new StateHandler("fts", firstTimeSetupStates, "welcome");
 
     await sleep(1000);
