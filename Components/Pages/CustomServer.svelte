@@ -2,7 +2,6 @@
   import { attemptConnection } from "$state/FirstTimeSetup/ts/connect";
   import { ConnectIcon } from "$ts/images/general";
   import { StateHandler } from "$ts/states";
-  import { sleep } from "$ts/util";
   import Actions from "../Actions.svelte";
   import Action from "../Actions/Action.svelte";
   import Header from "../Header.svelte";

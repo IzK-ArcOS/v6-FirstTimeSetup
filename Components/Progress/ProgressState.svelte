@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { StateHandler } from "$ts/states";
   import { State } from "$types/state";
 
   export let key: string;

@@ -1,10 +1,10 @@
 <script lang="ts">
   import { SecureIcon } from "$ts/images/general";
+  import { StateHandler } from "$ts/states";
   import axios from "axios";
   import { onMount } from "svelte";
   import Actions from "../Actions.svelte";
   import Action from "../Actions/Action.svelte";
-  import { StateHandler } from "$ts/states";
 
   export let handler: StateHandler;
 

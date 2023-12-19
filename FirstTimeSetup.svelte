@@ -1,12 +1,12 @@
 <script lang="ts">
-  import "./css/fts.css";
   import StateRenderer from "$lib/StateRenderer.svelte";
-  import { StateHandler } from "$ts/states";
-  import { onMount } from "svelte";
-  import { sleep } from "$ts/util";
-  import { firstTimeSetupStates } from "./ts/store/state";
-  import Progress from "./Components/Progress.svelte";
   import { ArcSoundBus } from "$ts/soundbus";
+  import { StateHandler } from "$ts/states";
+  import { sleep } from "$ts/util";
+  import { onMount } from "svelte";
+  import Progress from "./Components/Progress.svelte";
+  import "./css/fts.css";
+  import { firstTimeSetupStates } from "./ts/store/state";
 
   let handler: StateHandler;
   let show = false;
