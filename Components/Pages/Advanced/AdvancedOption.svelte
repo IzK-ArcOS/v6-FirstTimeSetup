@@ -7,7 +7,10 @@
 </script>
 
 {#if option}
-  <button class="advanced-option" on:click={() => option.action(handler)}>
+  <button
+    class="advanced-option"
+    on:click={async () => await option.action(handler)}
+  >
     <img src={option.image} alt="" />
     <div>
       <p class="title">{option.name}</p>

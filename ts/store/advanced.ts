@@ -1,12 +1,15 @@
+import { ArcTermApp } from "$apps/ArcTerm/ts/app";
 import { AdvancedOption } from "$state/FirstTimeSetup/types/advanced";
+import { loadApp, spawnApp } from "$ts/apps";
 import { ArcTermIcon } from "$ts/images/apps";
 import { BugReportIcon, HomeIcon } from "$ts/images/general";
-import { PrimaryState } from "$ts/states";
 
 export const advancedOptions: AdvancedOption[] = [
   {
-    action: () => {
-      PrimaryState.navigate("arcterm");
+    action: async () => {
+      //PrimaryState.navigate("arcterm");
+      await loadApp("ArcTerm", ArcTermApp)
+      spawnApp("ArcTerm", 0)
     },
     description: "Debug technical problems using ArcOS' terminal",
     name: "Launch ArcTerm",
