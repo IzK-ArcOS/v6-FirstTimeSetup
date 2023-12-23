@@ -69,7 +69,7 @@
   </div>
   <textarea value={license} class="license" spellcheck="false" readonly />
   <div class="bottom">
-    <button class="material-icons-round" on:click={help}>help</button>
+    <button class="material-icons-round" on:click={help}>info</button>
     <Actions inline>
       <Action fun={back}>Go Back</Action>
       <Action fun={accept} suggested>I Accept</Action>
