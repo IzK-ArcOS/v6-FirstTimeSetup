@@ -5,10 +5,14 @@
   import { onMount } from "svelte";
   import Actions from "../Actions.svelte";
   import Action from "../Actions/Action.svelte";
+  import { createErrorDialog } from "$ts/process/error";
+  import Help from "./License/Help.svelte";
+  import { ProcessStack } from "$ts/stores/process";
 
   export let handler: StateHandler;
 
   let license = "";
+  let licensePid = 0;
 
   onMount(async () => {
     try {
@@ -20,12 +24,36 @@
     }
   });
 
-  function back() {
+  async function back() {
+    await ProcessStack.kill(licensePid);
     handler.navigate("welcome");
   }
 
-  function accept() {
+  async function accept() {
+    await ProcessStack.kill(licensePid);
     handler.navigate("connect");
+  }
+
+  async function help() {
+    if (licensePid) return;
+
+    licensePid = await createErrorDialog(
+      {
+        title: "License info",
+        component: Help,
+        buttons: [
+          {
+            caption: "Okay",
+            action() {
+              licensePid = 0;
+            },
+          },
+        ],
+        image: SecureIcon,
+      },
+      0,
+      true
+    );
   }
 </script>
 
@@ -41,7 +69,7 @@
   </div>
   <textarea value={license} class="license" spellcheck="false" readonly />
   <div class="bottom">
-    <button class="material-icons-round">help</button>
+    <button class="material-icons-round" on:click={help}>help</button>
     <Actions inline>
       <Action fun={back}>Go Back</Action>
       <Action fun={accept} suggested>I Accept</Action>
