@@ -1,13 +1,13 @@
 <script lang="ts">
   import { SecureIcon } from "$ts/images/general";
+  import { createErrorDialog } from "$ts/process/error";
   import { StateHandler } from "$ts/states";
+  import { ProcessStack } from "$ts/stores/process";
   import axios from "axios";
   import { onMount } from "svelte";
   import Actions from "../Actions.svelte";
   import Action from "../Actions/Action.svelte";
-  import { createErrorDialog } from "$ts/process/error";
   import Help from "./License/Help.svelte";
-  import { ProcessStack } from "$ts/stores/process";
 
   export let handler: StateHandler;
 
