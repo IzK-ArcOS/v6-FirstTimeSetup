@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { WarningIcon } from "$ts/images/general";
+  import { WarningIcon } from "$ts/images/dialog";
   import Actions from "../../Actions.svelte";
   import Action from "../../Actions/Action.svelte";
   import Header from "../../Header.svelte";
