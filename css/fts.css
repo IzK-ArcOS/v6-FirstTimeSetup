@@ -60,7 +60,7 @@ div.fts-content > div {
   border: var(--content-border);
   border-radius: 10px;
   font-family: "Nunito Sans", sans-serif;
-  font-size: 13px;
+  font-size: var(--font-size);
 }
 
 div.fts-content div.content div.state-renderer {
