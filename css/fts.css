@@ -59,7 +59,7 @@ div.fts-content > div {
   color: var(--fg);
   border: var(--content-border);
   border-radius: 10px;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: var(--font);
   font-size: var(--font-size);
 }
 

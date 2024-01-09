@@ -6,7 +6,7 @@
 </p>
 <h4>What are the limitations?</h4>
 <ul>
-  <li>This software is provided without any warrenty.</li>
+  <li>This software is provided without any warranty.</li>
   <li>
     The software author or license cannot be held accountable for any damage
     inflicted by the software.
