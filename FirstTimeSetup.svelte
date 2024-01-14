@@ -7,12 +7,15 @@
   import Progress from "./Components/Progress.svelte";
   import "./css/fts.css";
   import { firstTimeSetupStates } from "./ts/store/state";
+  import { StartCoreProcesses } from "$ts/process/startup";
 
   let handler: StateHandler;
   let show = false;
 
   onMount(async () => {
     ArcSoundBus.playSound("arcos.system.logon");
+
+    StartCoreProcesses();
 
     handler = new StateHandler("fts", firstTimeSetupStates, "welcome");
 
