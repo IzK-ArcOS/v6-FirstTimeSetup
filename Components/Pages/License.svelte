@@ -25,12 +25,12 @@
   });
 
   async function back() {
-    await ProcessStack.kill(licensePid);
+    await ProcessStack.kill(licensePid, true);
     handler.navigate("welcome");
   }
 
   async function accept() {
-    await ProcessStack.kill(licensePid);
+    await ProcessStack.kill(licensePid, true);
     handler.navigate("connect");
   }
 
