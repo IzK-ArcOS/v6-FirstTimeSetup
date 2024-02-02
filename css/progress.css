@@ -34,6 +34,7 @@ div.fts-content div.progress div.progress-state.active {
 
 div.fts-content div.progress div.progress-state img {
   height: 24px;
+  min-width: 24px;
 }
 
 div.fts-content div.progress div.progress-state span {
