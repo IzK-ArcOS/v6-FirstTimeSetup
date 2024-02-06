@@ -16,7 +16,7 @@
 
   onMount(async () => {
     try {
-      const response = await axios.get("/LICENSE");
+      const response = await axios.get("./LICENSE");
 
       license = response.data;
     } catch {
