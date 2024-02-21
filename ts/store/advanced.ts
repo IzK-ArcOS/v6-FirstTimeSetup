@@ -1,6 +1,5 @@
 import { ArcTermApp } from "$apps/ArcTerm/ts/app";
 import { Creator } from "$apps/BugReports/Creator/ts/app";
-import { BugReports } from "$apps/BugReports/ts/app";
 import { AdvancedOption } from "$state/FirstTimeSetup/types/advanced";
 import { loadApp, spawnApp } from "$ts/apps";
 import { ArcTermIcon } from "$ts/images/apps";

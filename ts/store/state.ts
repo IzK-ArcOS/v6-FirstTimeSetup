@@ -4,12 +4,7 @@ import CustomServer from "$state/FirstTimeSetup/Components/Pages/CustomServer.sv
 import Finish from "$state/FirstTimeSetup/Components/Pages/Finish.svelte";
 import License from "$state/FirstTimeSetup/Components/Pages/License.svelte";
 import Welcome from "$state/FirstTimeSetup/Components/Pages/Welcome.svelte";
-import {
-  ConnectIcon,
-  FlagIcon,
-  SecureIcon,
-  WaveIcon,
-} from "$ts/images/general";
+import { ConnectIcon, FlagIcon, SecureIcon, WaveIcon } from "$ts/images/general";
 import { States } from "$types/state";
 
 export const firstTimeSetupStates: States = new Map([

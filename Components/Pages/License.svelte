@@ -53,7 +53,7 @@
         sound: "arcos.dialog.info",
       },
       0,
-      true
+      true,
     );
   }
 </script>

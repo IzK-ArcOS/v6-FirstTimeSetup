@@ -3,12 +3,12 @@
   import { StartCoreProcesses } from "$ts/process/startup";
   import { ArcSoundBus } from "$ts/soundbus";
   import { StateHandler } from "$ts/states";
+  import { ProcessStack } from "$ts/stores/process";
   import { sleep } from "$ts/util";
   import { onMount } from "svelte";
   import Progress from "./Components/Progress.svelte";
   import "./css/fts.css";
   import { firstTimeSetupStates } from "./ts/store/state";
-  import { ProcessStack } from "$ts/stores/process";
 
   let handler: StateHandler;
   let show = false;
