@@ -14,6 +14,16 @@ div.fts-content div.header img.image {
   height: 100px;
 }
 
+div.fts-content div.header div.slot.flex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+div.fts-content div.header div.slot span.material-icons-round {
+  font-size: 16px;
+}
+
 div.fts-content div.header div.slot * {
   margin: 0;
   text-align: center;

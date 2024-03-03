@@ -19,6 +19,8 @@
   async function connect(e?: SubmitEvent) {
     if (e) e.preventDefault();
 
+    if (!host) return;
+
     connecting = true;
 
     const success = await attemptConnection(host, ac);
@@ -29,11 +31,26 @@
 
     handler.navigate("finish");
   }
+
+  function checkSubmit(e: KeyboardEvent) {
+    const key = (e.key || "").toLowerCase();
+
+    if (key !== "enter") return;
+
+    connect();
+  }
 </script>
 
 <div class="connect-custom-content">
-  <Header img={ConnectIcon}>
-    <p>Enter the following information to connect to your server</p>
+  <Header img={ConnectIcon} flex={errored}>
+    {#if errored}
+      <span class="material-icons-round">error</span>
+    {/if}
+    <p>
+      {errored
+        ? "That didn't work! Please try entering the information again."
+        : "Enter the following information to connect to your server"}
+    </p>
   </Header>
   <form on:submit={connect} autocomplete="off">
     <div class="input" class:errored>
@@ -44,6 +61,7 @@
         bind:value={host}
         disabled={connecting}
         on:input={() => (errored = false)}
+        on:keydown={checkSubmit}
       />
       <span class="icon material-icons-round">dns</span>
     </div>
@@ -55,6 +73,7 @@
         bind:value={ac}
         disabled={connecting}
         on:input={() => (errored = false)}
+        on:keydown={checkSubmit}
       />
       <span class="icon material-icons-round">vpn_key</span>
     </div>
