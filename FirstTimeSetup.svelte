@@ -4,6 +4,7 @@
   import { ArcSoundBus } from "$ts/soundbus";
   import { StateHandler } from "$ts/states";
   import { ProcessStack } from "$ts/stores/process";
+  import { UserDataStore, UserName } from "$ts/stores/user";
   import { sleep } from "$ts/util";
   import { onMount } from "svelte";
   import Progress from "./Components/Progress.svelte";
@@ -14,6 +15,9 @@
   let show = false;
 
   onMount(async () => {
+    UserName.set("");
+    UserDataStore.set(null);
+
     ArcSoundBus.playSound("arcos.system.logon");
 
     ProcessStack.processes.set(new Map([]));
