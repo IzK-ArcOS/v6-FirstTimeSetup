@@ -30,3 +30,10 @@
   For more information about the licensing situation of ArcOS, and what to do in case of a License
   Violation, please contact the ArcOS Team using the information found on the website.
 </p>
+<p>
+  <i
+    >Please note that the ArcOS v6 codebase is inaccessible to the public as per ArcOS 6.0.1. We
+    cannot disclose any information whether or not the source code will become publicly available in
+    the future.</i
+  >
+</p>
