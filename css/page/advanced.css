@@ -14,7 +14,7 @@ div.state-fts-advanced div.options {
 
 div.state-fts-advanced div.options button {
   border: none;
-  border-radius: 10px;
+  border-radius: var(--win-border-rad);
   padding: 15px;
   display: flex;
   gap: 15px;

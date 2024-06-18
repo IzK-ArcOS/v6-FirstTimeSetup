@@ -14,7 +14,7 @@ div.fts-content div.actions.right {
 div.fts-content div.actions button {
   border: none;
   padding: 8px 20px;
-  border-radius: 7.5px;
+  border-radius: var(--button-border-rad);
   background-color: var(--button-bg);
   color: var(--fg);
 }
