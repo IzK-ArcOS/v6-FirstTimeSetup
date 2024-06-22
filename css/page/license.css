@@ -11,6 +11,7 @@ div.state-fts-license div.license-header {
   width: 100%;
   margin-bottom: 15px;
 }
+
 div.state-fts-license div.license-header * {
   margin: 0;
 }
@@ -27,6 +28,7 @@ div.state-fts-license div.license-header img {
   height: 48px;
   margin-left: auto !important;
 }
+
 div.state-fts-license div.license-header div.right {
   margin-left: auto !important;
 }
@@ -52,6 +54,7 @@ div.state-fts-license div.bottom {
 div.state-fts-license div.bottom div.right {
   margin-left: auto;
 }
+
 div.state-fts-license div.bottom button.material-icons-round {
   margin: 0;
   padding: 5px;
@@ -60,10 +63,53 @@ div.state-fts-license div.bottom button.material-icons-round {
   color: var(--fg);
   border-radius: 5px;
 }
+
 div.state-fts-license div.bottom button.material-icons-round:hover {
   background-color: var(--button-hover-bg);
   box-shadow: var(--suggested-hover-shadow);
 }
+
 div.state-fts-license div.bottom button.material-icons-round:active {
   background-color: var(--button-active-bg);
+}
+
+div.state-fts-license div.license-error {
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+div.state-fts-license div.license-error img {
+  height: 48px;
+}
+
+div.state-fts-license div.license-error p {
+  max-width: 300px;
+  text-align: center;
+}
+
+div.state-fts-license button {
+  border: none;
+  padding: 8px 20px;
+  border-radius: var(--button-border-rad);
+  background-color: var(--button-bg);
+  color: var(--fg);
+}
+
+div.state-fts-license button.suggested {
+  background-color: var(--suggested-bg);
+  color: var(--suggested-fg);
+  box-shadow: var(--suggested-shadow);
+}
+
+div.state-fts-license button.suggested:hover {
+  background-color: var(--suggested-hover-bg);
+  box-shadow: var(--suggested-hover-shadow);
+}
+div.state-fts-license button.suggested:active {
+  background-color: var(--suggested-active-bg);
+  box-shadow: none;
 }

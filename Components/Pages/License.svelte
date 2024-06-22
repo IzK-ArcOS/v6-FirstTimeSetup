@@ -8,19 +8,22 @@
   import Actions from "../Actions.svelte";
   import Action from "../Actions/Action.svelte";
   import Help from "./License/Help.svelte";
+  import { ErrorIcon } from "$ts/images/dialog";
 
   export let handler: StateHandler;
 
   let license = "";
   let licensePid = 0;
+  let errored = false;
 
   onMount(async () => {
     try {
       const response = await axios.get("./LICENSE");
 
       license = response.data;
+      throw "y";
     } catch {
-      license = "404 NOT FOUND";
+      errored = true;
     }
   });
 
@@ -56,6 +59,10 @@
       true,
     );
   }
+
+  function onlineLicense() {
+    window.open("https://www.gnu.org/licenses/gpl-3.0-standalone.html", "_blank");
+  }
 </script>
 
 <div class="license-content">
@@ -68,7 +75,18 @@
       <img src={SecureIcon} alt="" />
     </div>
   </div>
-  <textarea value={license} class="license" spellcheck="false" readonly />
+  {#if !errored}
+    <textarea value={license} class="license" spellcheck="false" readonly />
+  {:else}
+    <div class="license-error">
+      <img src={ErrorIcon} alt="" />
+      <p>
+        The license couldn't be found. If you want to view it, click the button to view an online
+        version:
+      </p>
+      <button class="suggested" on:click={onlineLicense}>View Online</button>
+    </div>
+  {/if}
   <div class="bottom">
     <button class="material-icons-round" on:click={help}>info</button>
     <Actions inline>
