@@ -21,7 +21,7 @@
       const response = await axios.get("./LICENSE");
 
       license = response.data;
-      throw "y";
+      // throw "y";
     } catch {
       errored = true;
     }
