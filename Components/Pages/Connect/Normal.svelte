@@ -14,7 +14,7 @@
   async function community() {
     connecting = true;
 
-    const success = await attemptConnection("community.arcapi.nl", "");
+    const success = await attemptConnection("legacy.arcapi.nl", "");
 
     connecting = false;
 
@@ -33,12 +33,12 @@
   <p class="subheader">Quite a useful thing</p>
 </Header>
 <p class="spaced">
-  Do you want to connect using the Community API, or<br />
+  Do you want to connect using the Legacy API, or<br />
   a custom one?
 </p>
 <Actions>
   <Action fun={community} disabled={connecting} suggested
-    >{connecting ? "Connecting..." : "Use Community"}</Action
+    >{connecting ? "Connecting..." : "Use Legacy"}</Action
   >
   <Action fun={custom} disabled={connecting}>Custom...</Action>
 </Actions>
